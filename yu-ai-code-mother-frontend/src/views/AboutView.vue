@@ -1,15 +1,13 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
+  <div class="about-view">
+    <h1>About</h1>
+    <p>AI 零代码应用生成平台 — powered by Vue 3 + Ant Design Vue.</p>
   </div>
 </template>
 
-<style>
-@media (min-width: 1024px) {
-  .about {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-  }
+<style scoped>
+.about-view {
+  text-align: center;
+  padding: 48px 0;
 }
 </style>
