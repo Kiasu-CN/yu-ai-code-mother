@@ -4,6 +4,9 @@ import java.io.Serializable;
 
 import com.yupi.yuaicodemother.exception.ErrorCode;
 
+import lombok.Data;
+
+@Data
 public class BaseResponse<T> implements Serializable {
     
     private int code;
