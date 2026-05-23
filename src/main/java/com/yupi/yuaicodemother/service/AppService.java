@@ -5,8 +5,11 @@ import java.util.List;
 import com.mybatisflex.core.query.QueryWrapper;
 import com.mybatisflex.core.service.IService;
 import com.yupi.yuaicodemother.model.entity.App;
+import com.yupi.yuaicodemother.model.entity.User;
 import com.yupi.yuaicodemother.model.dto.app.AppQueryRequest;
 import com.yupi.yuaicodemother.model.vo.AppVO;
+
+import reactor.core.publisher.Flux;
 
 /**
  * 应用 服务层。
@@ -19,4 +22,6 @@ public interface AppService extends IService<App> {
     QueryWrapper getQueryWrapper(AppQueryRequest appQueryRequest);
 
     List<AppVO> getAppVOList(List<App> appList);
+
+    Flux<String> chatToGenCode(Long appId, String message, User loginUser);
 }
